@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context/
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="address" class="com.jagatha.entities.Address">
+		<property name="city">
+			<value>Bangalore</value>
+		</property>
+		<property name="state">
+			<value>Karnataka</value>
+		</property>
+	</bean>
+	
+	<bean name="employee" class="com.jagatha.entities.Employee">
+		<property name="employeeId">
+			<value>123</value>
+		</property>
+		<property name="employeeName">
+			<value>Tara</value>
+		</property>
+		<property name="address" ref="address"/>
+	</bean>
+
+
+
+</beans>
